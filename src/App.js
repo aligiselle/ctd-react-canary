@@ -24,7 +24,7 @@ function App(){
     if (!isLoading) {
       localStorage.setItem('savedTodoList', JSON.stringify(todoList))
     }
-  }, [todoList] );
+  }, [todoList, isLoading] );
 
   function addTodo (newTodo){
     setTodoList([...todoList, newTodo]);
